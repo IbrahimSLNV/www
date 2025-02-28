@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+    font-family: 'Inter Variable';
+    background-color: rgba(245, 245, 245);
+}
+
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('./Inter-VariableFont.ttf');
+}
