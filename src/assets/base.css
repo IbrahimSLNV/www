@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+    --font-sophisticated: "Dancing Script";
+}
+
 :root {
     font-family: 'Inter Variable';
     background-color: rgba(245, 245, 245);
@@ -8,4 +12,9 @@
 @font-face {
     font-family: 'Inter Variable';
     src: url('./Inter-VariableFont.ttf');
+}
+
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('./DancingScript-VariableFont_wght.ttf');
 }
