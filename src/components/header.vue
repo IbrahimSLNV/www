@@ -2,9 +2,9 @@
     <div class="w-full h-auto flex flex-row justify-evenly text-offBlack mt-4">
         <div>
             <ul class="text-3xl list-none text-left font-medium">
-                <li class="hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">ACCUEIL</a></li>
-                <li class="pl-8 hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">À PROPOS DE MOI</a></li>
-                <li class="pl-8 hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">BLOG</a></li>
+                <li class="hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">HOME</a></li>
+                <li class="pl-8 hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">OVER MIJ</a></li>
+                <li class="pl-8 hover:transition delay-0 duration-150 ease-in-out hover:-translate-x-3 hover:scale-100"><a href="#">PROJECT</a></li>
             </ul>
         </div>
         <div class="flex flex-col justify-center items-center">
