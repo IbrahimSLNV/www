@@ -15,6 +15,31 @@ body {
 /* flex-container */
 .flex-container {
     background-color: whitesmoke;
-    width: 85rem;
     height: 100%;
+    width: 100%;
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
 }
