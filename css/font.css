@@ -1,0 +1,10 @@
+:root {
+    font-family: 'Inter Variable';
+    color: rgb(60, 60, 60);
+}
+
+
+@font-face {
+    font-family: 'Inter Variable';
+    src: url('../assets/font/Inter-VariableFont.ttf') format('truetype');
+}
