@@ -12,7 +12,7 @@ body {
 
     background-image: url("../assets/img/background.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
 }
 
 /* --- Page-container --- */
@@ -23,6 +23,6 @@ body {
     display: flex;
     flex-direction: column;
 
-    background-color: rgb(12, 12, 12);
-    box-shadow: rgb(12, 12, 12) 0px 0px 50px 50px;
+    background-color: rgb(28, 28, 28);
+    box-shadow: rgb(28, 28, 28) 0px 0px 50px 50px;
 }
