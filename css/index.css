@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(-45deg, #1e1e1e, #151515, #080808);
+  background: linear-gradient(-45deg, #1e1e1e, #1d1d1d, #080808);
   background-size: 300% 300%;
   animation: phantomFlow 8s ease infinite;
   font-family: "Arial", sans-serif;
@@ -59,6 +59,7 @@ header a {
   margin: 0.5rem 0rem;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  opacity: 0;
 }
 .menu > li:hover {
   transform: translateX(10px);
@@ -84,6 +85,7 @@ header a {
   flex-direction: column;
   position: absolute;
 }
+/* The part above can now easily be copied accross CSS files */
 /* content */
 .content {
     display: flex;
@@ -105,7 +107,7 @@ main {
 }
 .main-content {
     color: rgb(237, 237, 237);
-    height: fit-content%;
+    height: fit-content;
     width: fit-content;
 }
 .main-content h1 {
@@ -113,10 +115,12 @@ main {
     margin: 0rem 0rem 1rem;
     font-size: 4rem;
     font-weight: 400;
+    opacity: 0;
 }
 .main-content p {
     font-size: 1.3rem;
     line-height: 1.6rem;
+    opacity: 0;
 }
 /* footer */
 footer {
@@ -128,6 +132,7 @@ footer {
     color: rgba(237, 237, 237, 1);
     text-align: right;
     width: auto;
+    opacity: 0;
 }
 .special {
     color: rgb(175, 175, 175);
