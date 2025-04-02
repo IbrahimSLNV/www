@@ -1,28 +1,116 @@
-/* HTML & BODY */
-html, body {
-    margin: 0rem;
-    height: 100%;
+/* * */
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
-
+/* html */
+html {
+  height: 100%;
+}
+/* body */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
-
-    background-image: url("../assets/img/background.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(-45deg, #1e1e1e, #0d0d0d, #1c1c1c);
+  background-size: 300% 300%;
+  animation: phantomFlow 8s ease infinite;
+  font-family: "Arial", sans-serif;
+  color: white;
+  transition: all 2s ease-in-out;
 }
-
-/* --- Page-container --- */
+@keyframes phantomFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* page-container */
 .page-container {
-    height: 100%;
-    width: 80%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+}
+/* header */
+header {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  z-index: 100;
+}
+header ul {
+  margin: 0.3rem .8rem;
+  font-size: 1.3rem;
+}
+header a {
+  text-decoration: none;
+  color: rgb(237, 237, 237);
+}
+.menu > li {
+  margin: 0.5rem 0rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.menu > li:hover {
+  transform: translateX(10px);
+}
+.item {
+  position: relative;
+}
+/* Updated Submenu Animation */
+.submenu {
+  display: none;
+  margin: 0;
+  padding-left: 1rem;
+}
+.submenu > li {
+    padding-bottom: .5rem;
+    transition: all .2s ease-in-out;
+}
+.submenu > li:hover {
+    transform: translateX(10px);
+}
+.item:hover .submenu {
+  display: inline-flex;
+  flex-direction: column;
+  position: absolute;
+}
+/* content */
+.content {
     display: flex;
     flex-direction: column;
-
-    background-color: rgb(28, 28, 28);
-    box-shadow: rgb(28, 28, 28) 0px 0px 50px 50px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+/* main */
+main {
+    flex: 1;
+    padding: 1rem;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+/* footer */
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: rgba(237, 237, 237, 1);
+    text-align: right;
+    width: auto;
 }
