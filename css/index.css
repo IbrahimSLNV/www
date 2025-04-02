@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
-  background: linear-gradient(-45deg, #1e1e1e, #0d0d0d, #1c1c1c);
+  background: linear-gradient(-45deg, #1e1e1e, #151515, #080808);
   background-size: 300% 300%;
   animation: phantomFlow 8s ease infinite;
   font-family: "Arial", sans-serif;
@@ -95,13 +95,28 @@ header a {
 /* main */
 main {
     flex: 1;
-    padding: 1rem;
     width: 100%;
-    overflow: auto;
+    padding: 2rem;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+}
+.main-content {
+    color: rgb(237, 237, 237);
+    height: fit-content%;
+    width: fit-content;
+}
+.main-content h1 {
+    font-family: 'Playwrite';
+    margin: 0rem 0rem 1rem;
+    font-size: 4rem;
+    font-weight: 400;
+}
+.main-content p {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
 }
 /* footer */
 footer {
@@ -113,4 +128,7 @@ footer {
     color: rgba(237, 237, 237, 1);
     text-align: right;
     width: auto;
+}
+.special {
+    color: rgb(175, 175, 175);
 }
