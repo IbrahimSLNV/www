@@ -1,0 +1,42 @@
+/* main */
+main {
+  max-width: 80%;
+  margin: 2rem auto;
+}
+main h1 {
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+main > p {
+    font-size: 12pt;
+}
+main p:first-of-type {
+  margin-bottom: 0.5rem;
+}
+/* cv */
+.cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.cv p {
+    font-size: 12pt;
+}
+.cv h1 {
+    font-size: 16pt;
+    font-weight: 600;
+}
+.cv > div {
+  flex: 1 1 300px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem 1rem 0rem 1rem;
+}
+.cv ul {
+  list-style-type: circle;
+  display: block;
+  padding-left: 1rem;
+}
+.cv ul li {
+  font-size: 12pt;
+}

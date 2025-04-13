@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/who.css">
+    <link rel="stylesheet" href="./jquery-ui/jquery-ui.css" />
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./jquery-ui/jquery-ui.js"></script>
+    <script>
+      $().ready(() => {
+        // vars
+        let subHidden = true;
+        // initial hide
+        $(".submenu").hide();
+        // redirects to a google search
+        $("#search-btn").click(() => {
+            let value = $("#search-box").val();
+            window.location.href = `https://www.google.com/search?q=${value}`;
+        });
+        // rick
+        $("#lucky").click(() => {
+            window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`;
+        })
+        // shows and hides menu
+        $(".special-link.with-sub").click(() => {
+            if(subHidden) {
+                $(".submenu").show();
+                $("#icon").html("▲");
+                subHidden = false;
+            } else {
+                $(".submenu").hide();
+                $("#icon").html("▼");
+                subHidden = true;
+            }
+        })
+      });
+    </script>
+  </head>
+  <body>
+    <div class="page-container">
+      <header>
+        <nav>
+          <ul>
+            <li><a class="special-link" href="./index.html">Web</a></li>
+            <li><a href="./who.html">Who am I?</a></li>
+            <li class="special-link with-sub"><span>Project</span> <small id="icon">▼</small>
+                <ul class="submenu">
+                    <li><a href="./project.html">Details</a></li>
+                    <li><a href="#">Software</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Hi I'm Ibrahim!</h1>
+        <p>I'm a young IT student currently studying @ <span style="color: orange;">Thomas More Campus De Nayer</span>.</p>
+        <p>Here's all sorts of information about me:</p>
+        <div class="cv">
+            <div>
+                    <h1>What do I do in my spare time?</h1>
+                    <p>As a young man I love to go outside and do all sorts of physical activities. This takes a good chunk of my time.
+                    Sometimes, when I feel like it, even tho I don't have anything due, I like to study.
+                    What I do majoritarily is simply browse online and learn a lot. I like to know a lot. I never stop learning.
+                    I love learning about lots and lots of subjects. I think that's something really important.
+                    I do game a bit too with friends from time to time.</p>
+            </div>
+            <div>
+                    <h1>My studies?</h1>
+                    <p>For my secundary studies I went to <i>Regina Pacisinstituut</i> in Brussels.
+                    For my first year nothing much happened. For the second year I decided to take the path of science studies.
+                    Sadly, due to Covid-19 and other reasons I nearly failed that year.
+                    I then decided to switch to economics. Where I stayed for two years (3rd and 4th).
+                    Due to the lack of intrest I switched to IT & Network for my last two years.
+                    This diversity gives me a good basis in lots of subjects inside economics, science and IT.</p>
+            </div>
+            <div>
+                <h1>What are my qualities?</h1>
+                <p>
+                  <ul>
+                    <li>I love learning</li>
+                    <li>I speak three languages
+                      <ul>
+                        <li>French</li>
+                        <li>English</li>
+                        <li>Dutch</li>
+                      </ul>
+                    </li>
+                    <li>I'm very social</li>
+                    <li>I like to keep things organized</li>
+                  </ul>
+                </p>
+            </div>
+            <div>
+              <h1>Have I worked on projects before?</h1>
+              <p>Yes and no. Before high-school I never really worked on any big project before. Nonetheless I did work on projects.
+                My most notable project was this years (2025) project for my Practice Enterprise course, you can find more info inside <thead>
+                  "Project" tab. RIght now I'm very excited to start working on bigger things for my studies.
+                </thead>
+              </p>
+            </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          Copyright © Thomas More Mechelen-Antwerpen vzw - Campus De Nayer -
+          Professionele bachelor elektronica-ict - 2025
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
