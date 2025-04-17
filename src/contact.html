@@ -6,7 +6,7 @@
     <title>Ibrahim</title>
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
-    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="stylesheet" href="./jquery-ui/jquery-ui.css" />
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./jquery-ui/jquery-ui.js"></script>
@@ -16,15 +16,6 @@
         let subHidden = true;
         // initial hide
         $(".submenu").hide();
-        // redirects to a google search
-        $("#search-btn").click(() => {
-            let value = $("#search-box").val();
-            window.location.href = `https://www.google.com/search?q=${value}`;
-        });
-        // rick
-        $("#lucky").click(() => {
-            window.location.href = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`;
-        })
         // shows and hides menu
         $(".special-link.with-sub").click(() => {
             if(subHidden) {
@@ -35,6 +26,20 @@
                 $(".submenu").hide();
                 $("#icon").html("▼");
                 subHidden = true;
+            }
+        })
+        // checks for form input
+        $("#submit").click((event) => {
+            // vars
+            let name = $('input[name="name"]').val().trim();
+            let mail = $('input[name="email"]').val().trim();
+            let subject = $('input[name="subject"]').val().trim();
+            let text = $('textarea').val().trim();
+            // checks
+            if(name == "" || mail == "" || subject == "" || text == "") {
+                alert("FIELDS NOT COMPLETED!");
+                event.defaultPrevented(); // https://www.w3schools.com/jsref/event_defaultprevented.asp
+                return;
             }
         })
       });
@@ -54,21 +59,24 @@
                     <li><a href="./project.html#team">Team</a></li>
                 </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <div class="title">
-          <img src="./assets/img/logo.png" alt="">
-        </div>
-        <div class="search">
-          <input type="text" id="search-box"/>
-        </div>
-        <div class="buttons">
-          <button id="search-btn">Search</button>
-          <button id="lucky">I'm feeling lucky</button>
-        </div>
+        <form action="mailto:hi@hello.me" method="POST" enctype="text/plain">
+            <div class="inside">
+                <div class="heading">
+                    <h1>Contact me!</h1>
+                    <hr>
+                </div>
+                <input type="text" placeholder="Enter your name" name="Name">
+                <input type="email" placeholder="Enter your e-mail" name="E-mail">
+                <input type="text" placeholder="Enter the subject" name="Subject">
+                <textarea name="Text" placeholder="Say a bit more..." id="textArea"></textarea>
+            </div>
+            <input type="submit" value="SUBMIT THIS FORM" id="submit">
+        </form>
       </main>
       <footer>
         <p>
