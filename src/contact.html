@@ -16,6 +16,7 @@
         let subHidden = true;
         // initial hide
         $(".submenu").hide();
+        $("#message").hide();
         // shows and hides menu
         $(".special-link.with-sub").click(() => {
             if(subHidden) {
@@ -37,10 +38,11 @@
             let text = $('textarea').val().trim();
             // checks
             if(name == "" || mail == "" || subject == "" || text == "") {
-                alert("FIELDS NOT COMPLETED!");
+                $("#message").slideDown();
                 event.preventDefault(); //https://stackoverflow.com/questions/9347282/using-jquery-preventing-form-from-submitting
                 return false;
             }
+            $("#message").hide();
         })
       });
     </script>
@@ -77,6 +79,7 @@
             </div>
             <input type="submit" value="SUBMIT THIS FORM" id="submit">
         </form>
+        <h2 id="message">Form not completed!</h2>
       </main>
       <footer>
         <p>

@@ -8,3 +8,17 @@
     margin: 1rem 0;
     border: solid .2px rgba(0, 0, 0, 0.6);
   }
+  button {
+    width: auto;
+    height: auto;
+    border: solid 1px rgba(0, 0, 0, 0.6);
+    border-radius: 2px;
+    background-color: whitesmoke;
+    font-size: .8rem;
+  }
+  input {
+    border-radius: 2px;
+  }
+  input:target {
+    border: black;
+  }
