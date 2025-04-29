@@ -11,7 +11,7 @@
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./jquery-ui/jquery-ui.js"></script>
     <script>
-      $().ready(() => {
+      $("document").ready(() => {
         // vars
         let subHidden = true;
         // initial hide
@@ -29,17 +29,17 @@
             }
         })
         // checks for form input
-        $("#submit").click((event) => {
+        $("form").submit((event) => {
             // vars
-            let name = $('input[name="name"]').val().trim();
-            let mail = $('input[name="email"]').val().trim();
-            let subject = $('input[name="subject"]').val().trim();
+            let name = $('input[name="Name"]').val().trim();
+            let mail = $('input[name="E-mail"]').val().trim();
+            let subject = $('input[name="Subject"]').val().trim();
             let text = $('textarea').val().trim();
             // checks
             if(name == "" || mail == "" || subject == "" || text == "") {
                 alert("FIELDS NOT COMPLETED!");
-                event.defaultPrevented(); // https://www.w3schools.com/jsref/event_defaultprevented.asp
-                return;
+                event.preventDefault(); //https://stackoverflow.com/questions/9347282/using-jquery-preventing-form-from-submitting
+                return false;
             }
         })
       });
